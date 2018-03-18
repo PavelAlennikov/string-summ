@@ -6,7 +6,6 @@ import java.util.regex.*;
 public class StringUtils {
 
     private StringUtils() {
-
     }
 
     public static String summ(String firstString, String secondString) {
@@ -48,6 +47,13 @@ public class StringUtils {
             }
         }
         return new String(reverse(result)).trim();
+    }
+
+    public static void getStringDigitsInfo() {
+        for (byte i = 0; i < 10; i = add(i, (byte) 1)) {
+            byte code = Integer.toString(i).getBytes()[0];
+            System.out.println("digit = " + i + " code = " + code + " binaryCode = " + Integer.toBinaryString(code));
+        }
     }
 
     private static boolean isValid(String numericalString) {
@@ -102,12 +108,5 @@ public class StringUtils {
         byte sum = (byte) (firstByte ^ secondByte);
         byte carry = (byte) ((firstByte & secondByte) << 1);
         return add(sum, carry);
-    }
-
-    public static void getStringDigitsInfo() {
-        for (byte i = 0; i < 10; i = add(i, (byte) 1)) {
-            byte code = Integer.toString(i).getBytes()[0];
-            System.out.println("digit = " + i + " code = " + code + " binaryCode = " + Integer.toBinaryString(code));
-        }
     }
 }
