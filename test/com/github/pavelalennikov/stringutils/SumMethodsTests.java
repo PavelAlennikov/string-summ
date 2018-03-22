@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class SumMethodsTests {
+
     @Test
     public void sumNumbersMethodTest() {
         for (int i = 0; i < 1000; i++) {

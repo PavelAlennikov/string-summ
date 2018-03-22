@@ -90,6 +90,7 @@ public class StringUtilsNew {
     private static String next(String current) {
         ListIterator<String> stringListIterator = DIGITS.listIterator(DIGITS.indexOf(current));
         stringListIterator.next();
+
         if (stringListIterator.hasNext()) {
             return stringListIterator.next();
         } else {
@@ -99,6 +100,7 @@ public class StringUtilsNew {
 
     private static String prev(String current) {
         ListIterator<String> stringListIterator = DIGITS.listIterator(DIGITS.indexOf(current));
+
         if (stringListIterator.hasPrevious()) {
             return stringListIterator.previous();
         } else {
@@ -129,12 +131,12 @@ public class StringUtilsNew {
 
         String currentDigit = String.valueOf(number.charAt(number.length() - 1));
         String newDigit = next(currentDigit);
-        String join = String.join("", trimLastChar(number));
+        String numberDecades = trimLastChar(number);
 
         if (newDigit.equals("0")) {
-            return plusOne(join) + newDigit;
+            return plusOne(numberDecades) + newDigit;
         } else {
-            return join + newDigit;
+            return numberDecades + newDigit;
         }
     }
 
@@ -142,13 +144,15 @@ public class StringUtilsNew {
         if (number.equals("1")) {
             return "";
         }
+
         String currentDigit = getLastCharAsString(number);
         String newDigit = prev(currentDigit);
-        String join = String.join("", trimLastChar(number));
+        String numberDecades = trimLastChar(number);
+
         if (newDigit.equals("9")) {
-            return subOne(join) + newDigit;
+            return subOne(numberDecades) + newDigit;
         } else {
-            return join + newDigit;
+            return numberDecades + newDigit;
         }
     }
 
