@@ -60,12 +60,12 @@ public class StringUtilsNew {
         String secondNumberUnits = getLastCharAsString(secondNumber);
         String secondNumberDecades = trimLastChar(secondNumber);
 
-        String sum = sumDigits(firstNumberUnits, secondNumberUnits);
+        String digitsSum = sumDigits(firstNumberUnits, secondNumberUnits);
 
-        if (DIGITS.indexOf(sum) < DIGITS.indexOf(firstNumberUnits)) {
+        if (DIGITS.indexOf(digitsSum) < DIGITS.indexOf(firstNumberUnits)) {
             firstNumberDecades = plusOne(firstNumberDecades);
         }
-        return sum(firstNumberDecades, secondNumberDecades) + sum;
+        return sum(firstNumberDecades, secondNumberDecades) + digitsSum;
     }
 
     private static String sumByOne(String firstNumber, String secondNumber) {
