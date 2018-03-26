@@ -1,8 +1,8 @@
 package com.github.pavelalennikov;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.regex.Matcher;
@@ -15,7 +15,7 @@ public class StringUtilsNew {
     }
 
     private static final List<String> DIGITS =
-            new LinkedList<>(Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9"));
+            new ArrayList<>(Arrays.asList("0", "1", "2", "3", "4", "5", "6", "7", "8", "9"));
 
     public static String sumNumbers(String firstNumber, String secondNumber) {
         if (firstNumber.length() < secondNumber.length()) {

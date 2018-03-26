@@ -33,7 +33,6 @@ public class SumMethodsTests {
     @Test(expected = IllegalArgumentException.class)
     public void sumMethodValidationTest() {
         StringUtilsNew.sumNumbers("abc", "");
-
     }
 
     @Test(expected = IllegalArgumentException.class)
